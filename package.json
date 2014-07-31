@@ -1,0 +1,22 @@
+{
+  "name": "minder",
+  "version": "0.0.0",
+  "description": "File server with user-configurable share settings.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DavidQL/UNIX-system-admin-work-repo.git"
+  },
+  "author": "David Aragon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavidQL/UNIX-system-admin-work-repo/issues"
+  },
+  "homepage": "https://github.com/DavidQL/UNIX-system-admin-work-repo",
+  "devDependencies": {
+    "express": "^4.7.2"
+  }
+}
