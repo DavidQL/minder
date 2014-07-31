@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/DavidQL/UNIX-system-admin-work-repo",
   "devDependencies": {
-    "express": "^4.7.2"
+    "express": "^4.7.2",
+    "underscore": "^1.6.0",
+    "nodemon": "^1.2.1"
   }
 }
