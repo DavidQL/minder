@@ -19,3 +19,5 @@ npm install -g express
 Todo: 
 
 [] node app restarts when config file is changed
+[] bash script to install node and app
+[] 

@@ -1,3 +1,12 @@
+# SAMPLE PERMISSIONS.TXT FILE
+#
+# PERMISSION OPTIONS:
+#   Open to the public
+#   With password <password>
+#   From <dd/mm/yyyy> until <dd/mm/yyyy>
+#   Rules <rule #> AND <rule #>
+
+
 1. Open to the public:
 - open-file.txt
 - open-file-2.txt
