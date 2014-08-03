@@ -4,20 +4,23 @@
 ### Installation steps on CentOS
 
 Download and expand the source code:
-  `curl -L https://github.com/DavidQL/minder/archive/v0.1.tar.gz | tar zx`
+  `curl -L https://github.com/DavidQL/minder/archive/v0.2.tar.gz | tar zx`
 
 Go into the new minder directory:
-  `cd minder-0.1`
+  `cd minder-0.2`
 
-If you do not have node installed, run the install script:
+If you do not have node installed, run my install script (this will take some time):
   `bash install.sh`
 
-Using visudo, look for secure_path, and append the following to it: `:/usr/local/bin`."
-Then, cd into the Minder directory and run `npm install` (may require sudo)."
+Then, cd into the Minder directory and run `npm install`.
 Finally, start the file server with `node index.js`."
 
-Todo: 
+### User folder setup
 
-[] node app restarts when config file is changed
-[] bash script to install node and app
-[] 
+To create a folder in which Pam can add files, but other users cannot view them:
+  `useradd pam`
+  `mkdir pam`
+  `chmod 770 pam`
+  `chgrp pam pam`
+
+  Now the user pam can add a permissions.txt file to her folder, as well as any files she wants to serve.

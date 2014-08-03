@@ -10,6 +10,5 @@ cd node-v0.10.29
 make
 make install
 
-echo "Now, using visudo, look for secure_path, and append the following to it: `:/usr/local/bin`."
-echo "Then, cd into the Minder directory and run `npm install` (may require sudo)."
-echo "Finally, start the file server with `node index.js`."
+echo "Then, cd into the Minder directory and run 'npm install' (may require sudo)."
+echo "Finally, start the file server with 'node index.js'."

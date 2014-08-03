@@ -3,7 +3,7 @@ var fs = require('fs');
 var _ = require('underscore');
 
 var app = express();
-var testPermission = require('./permissions');
+var testPermission = require('./lib/permissions');
 
 app.get('/:directory/:filename', function(req, res){
 
@@ -23,11 +23,9 @@ app.get('/:directory/:filename', function(req, res){
     if (testPermission(opts)) {
       res.sendfile('./' + req.params.directory + '/' + req.params.filename);
     } else {
-      res.send(403, 'Sorry! you cant see that.');
+      res.status(403).send('Sorry! you cant see that.');
     }
   });
-
-
 });
 
 app.listen(3000, function(err, result) {

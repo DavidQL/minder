@@ -1,0 +1,115 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.29
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/media/sf_unix-system-adm/minder',
+5 verbose install   [ 'express',
+5 verbose install     'underscore',
+5 verbose install     'nodemon',
+5 verbose install     'moment',
+5 verbose install     'grunt-mocha-test',
+5 verbose install     'chai' ] ]
+6 info preinstall minder@0.0.0
+7 verbose readDependencies using package.json deps
+8 verbose already installed skipping nodemon@^1.2.1 /media/sf_unix-system-adm/minder
+9 verbose already installed skipping express@^4.7.2 /media/sf_unix-system-adm/minder
+10 verbose already installed skipping underscore@^1.6.0 /media/sf_unix-system-adm/minder
+11 verbose already installed skipping moment@^2.8.1 /media/sf_unix-system-adm/minder
+12 verbose already installed skipping grunt-mocha-test@^0.11.0 /media/sf_unix-system-adm/minder
+13 verbose already installed skipping chai@^1.9.1 /media/sf_unix-system-adm/minder
+14 silly resolved []
+15 info build /media/sf_unix-system-adm/minder
+16 verbose linkStuff [ false, false, false, '/media/sf_unix-system-adm' ]
+17 info linkStuff minder@0.0.0
+18 verbose linkBins minder@0.0.0
+19 verbose linkMans minder@0.0.0
+20 verbose rebuildBundles minder@0.0.0
+21 verbose rebuildBundles [ '.bin',
+21 verbose rebuildBundles   'chai',
+21 verbose rebuildBundles   'chai-as-promised',
+21 verbose rebuildBundles   'express',
+21 verbose rebuildBundles   'grunt',
+21 verbose rebuildBundles   'grunt-cli',
+21 verbose rebuildBundles   'grunt-mocha-test',
+21 verbose rebuildBundles   'jquery',
+21 verbose rebuildBundles   'moment',
+21 verbose rebuildBundles   'nodemon',
+21 verbose rebuildBundles   'q',
+21 verbose rebuildBundles   'underscore' ]
+22 verbose rebuild bundle /media/sf_unix-system-adm/minder/node_modules/chai-as-promised
+23 info build /media/sf_unix-system-adm/minder/node_modules/chai-as-promised
+24 info preinstall chai-as-promised@4.1.1
+25 verbose linkStuff [ false,
+25 verbose linkStuff   false,
+25 verbose linkStuff   false,
+25 verbose linkStuff   '/media/sf_unix-system-adm/minder/node_modules' ]
+26 info linkStuff chai-as-promised@4.1.1
+27 verbose linkBins chai-as-promised@4.1.1
+28 verbose linkMans chai-as-promised@4.1.1
+29 verbose rebuildBundles chai-as-promised@4.1.1
+30 info install chai-as-promised@4.1.1
+31 info postinstall chai-as-promised@4.1.1
+32 verbose rebuild bundle /media/sf_unix-system-adm/minder/node_modules/grunt
+33 info build /media/sf_unix-system-adm/minder/node_modules/grunt
+34 info preinstall grunt@0.4.5
+35 verbose linkStuff [ false,
+35 verbose linkStuff   false,
+35 verbose linkStuff   false,
+35 verbose linkStuff   '/media/sf_unix-system-adm/minder/node_modules' ]
+36 info linkStuff grunt@0.4.5
+37 verbose linkBins grunt@0.4.5
+38 verbose linkMans grunt@0.4.5
+39 verbose rebuildBundles grunt@0.4.5
+40 verbose rebuildBundles [ '.bin',
+40 verbose rebuildBundles   'async',
+40 verbose rebuildBundles   'coffee-script',
+40 verbose rebuildBundles   'colors',
+40 verbose rebuildBundles   'dateformat',
+40 verbose rebuildBundles   'eventemitter2',
+40 verbose rebuildBundles   'exit',
+40 verbose rebuildBundles   'findup-sync',
+40 verbose rebuildBundles   'getobject',
+40 verbose rebuildBundles   'glob',
+40 verbose rebuildBundles   'grunt-legacy-log',
+40 verbose rebuildBundles   'grunt-legacy-util',
+40 verbose rebuildBundles   'hooker',
+40 verbose rebuildBundles   'iconv-lite',
+40 verbose rebuildBundles   'js-yaml',
+40 verbose rebuildBundles   'lodash',
+40 verbose rebuildBundles   'minimatch',
+40 verbose rebuildBundles   'nopt',
+40 verbose rebuildBundles   'rimraf',
+40 verbose rebuildBundles   'underscore.string',
+40 verbose rebuildBundles   'which' ]
+41 info install grunt@0.4.5
+42 info postinstall grunt@0.4.5
+43 verbose rebuild bundle /media/sf_unix-system-adm/minder/node_modules/grunt-cli
+44 info build /media/sf_unix-system-adm/minder/node_modules/grunt-cli
+45 info preinstall grunt-cli@0.1.13
+46 verbose linkStuff [ false,
+46 verbose linkStuff   false,
+46 verbose linkStuff   false,
+46 verbose linkStuff   '/media/sf_unix-system-adm/minder/node_modules' ]
+47 info linkStuff grunt-cli@0.1.13
+48 warn prefer global grunt-cli@0.1.13 should be installed with -g
+49 verbose linkBins grunt-cli@0.1.13
+50 verbose link bins [ { grunt: 'bin/grunt' },
+50 verbose link bins   '/media/sf_unix-system-adm/minder/node_modules/.bin',
+50 verbose link bins   false ]
+51 verbose linkMans grunt-cli@0.1.13
+52 verbose rebuildBundles grunt-cli@0.1.13
+53 verbose rebuildBundles [ '.bin', 'findup-sync', 'nopt', 'resolve' ]
+54 error Error: EROFS, symlink '../grunt-cli/bin/grunt'
+55 error If you need help, you may report this *entire* log,
+55 error including the npm and node versions, at:
+55 error     <http://github.com/npm/npm/issues>
+56 error System Linux 2.6.32-431.20.5.el6.x86_64
+57 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+58 error cwd /media/sf_unix-system-adm/minder
+59 error node -v v0.10.29
+60 error npm -v 1.4.14
+61 error path ../grunt-cli/bin/grunt
+62 error code EROFS
+63 error errno 56
+64 verbose exit [ 56, true ]
