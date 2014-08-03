@@ -5,16 +5,23 @@ var _ = require('underscore');
 var app = express();
 var testPermission = require('./permissions');
 
-app.get('/:filename', function(req, res){
+app.get('/:directory/:filename', function(req, res){
 
-  fs.readFile(req.params.filename, function(err, data) {
+  fs.readFile(req.params.directory + '/' + req.params.filename, function(err, data) {
+    var opts;
     if (err) {
       res.send(404, 'Not found.');
       return;
     }
 
-    if (testPermission(req.params.filename)) {
-      res.sendfile('./' + req.params.filename);
+    opts = {
+      directory: req.params.directory,
+      filename: req.params.filename,
+      password: req.query.password
+    };
+
+    if (testPermission(opts)) {
+      res.sendfile('./' + req.params.directory + '/' + req.params.filename);
     } else {
       res.send(403, 'Sorry! you cant see that.');
     }

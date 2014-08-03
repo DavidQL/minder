@@ -1,0 +1,12 @@
+1. Open to the public:
+- open-file.txt
+- open-file-2.txt
+
+2. With password flooberjorbin:
+- password-protected.txt
+
+3. From 7/30/2014 until 8/15/2014:
+- time-protected.txt
+
+4. Rules 2 AND 3:
+- compound-rule-file.txt

@@ -1,7 +1,6 @@
 var fs = require('fs');
 var _ = require('underscore');
 var moment = require('moment');
-
 var permissions = {};
 
 var rules;
@@ -12,11 +11,9 @@ var filenameInList = function(filename, list) {
   });
 };
 
-fs.readFile('./permissions.txt', {encoding: 'UTF-8'}, function(err, data) {
-  if (err) {
-    console.log('Error opening permissions file', err);
-    return;
-  }
+var setupPermissions = function(directory) {
+  var data = fs.readFileSync('./' + directory + '/permissions.txt', {encoding: 'UTF-8'});
+
   rules = data.split(/\d\.\s/).slice(1).map(function(rule) {
     var directive = rule.split(/\n/)[0];
     var files = _.compact(rule.split(/\n/).slice(1)).map(function(filename) {
@@ -46,17 +43,17 @@ fs.readFile('./permissions.txt', {encoding: 'UTF-8'}, function(err, data) {
         return isWithinTimeRange && filenameInList(opts.filename, this.files);
       }
     } else if (directive.substr(0,5) === "Rules") {
-      condition = function(opts, rules) {
+      condition = function(opts) {
         var ruleNumbers = directive.substr(6).split(' AND ').map(function(num) {
           return parseInt(num, 10);
         });
         return _.every(ruleNumbers, function(ruleNumber) {
-          var rule = rules[ruleNumber - 1];
-          return rule.condition(_.extend(opts, {compoundRule: true}), rules);
+          var rule = opts.rules[ruleNumber - 1];
+          return rule.condition(_.extend(opts, {compoundRule: true}));
         });
       }
     } else {
-      condition = function(opts, rules) {
+      condition = function(opts) {
         return false;
       }
     }
@@ -67,11 +64,12 @@ fs.readFile('./permissions.txt', {encoding: 'UTF-8'}, function(err, data) {
       condition: condition
     };
   });
-});
+};
+
 
 module.exports = function(opts) { 
+  setupPermissions(opts.directory);
   return _.some(rules, function(rule) {
-    // console.log('Testing ' + opts.filename + ' with rule ' + rule.directive + '. Result: ' + rule.condition(opts, rules));
-    return rule.condition(opts, rules);
+    return rule.condition(_.extend(opts, {rules: rules}));
   });
 };
