@@ -3,19 +3,19 @@
 
 ### Installation steps on CentOS
 
-`
-yum -y groupinstall "Development Tools"
-cd /usr/src
-wget http://nodejs.org/dist/v0.10.29/node-v0.10.29.tar.gz
-tar zxf node-v0.10.4.tar.gz
-cd node-v0.10.4
-./configure
-make
-make install
-sudo visudo
-	Look for secure_path, and append the following to it: ":/usr/local/bin". 
-npm install -g express
-`
+Download and expand the source code:
+  `curl -L https://github.com/DavidQL/minder/archive/v0.1.tar.gz | tar zx`
+
+Go into the new minder directory:
+  `cd minder-0.1`
+
+If you do not have node installed, run the install script:
+  `bash install.sh`
+
+Using visudo, look for secure_path, and append the following to it: `:/usr/local/bin`."
+Then, cd into the Minder directory and run `npm install` (may require sudo)."
+Finally, start the file server with `node index.js`."
+
 Todo: 
 
 [] node app restarts when config file is changed

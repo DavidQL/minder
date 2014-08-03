@@ -1,10 +1,11 @@
 #!/bin/sh
 
 yum -y groupinstall "Development Tools"
+yum install wget
 cd /usr/src
 wget http://nodejs.org/dist/v0.10.29/node-v0.10.29.tar.gz
-tar zxf node-v0.10.4.tar.gz
-cd node-v0.10.4
+tar zxf node-v0.10.29.tar.gz
+cd node-v0.10.29
 ./configure
 make
 make install
