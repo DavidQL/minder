@@ -4,7 +4,7 @@
   "description": "File server with user-configurable share settings.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node debug ./node_modules/.bin/grunt"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,9 @@
   "devDependencies": {
     "express": "^4.7.2",
     "underscore": "^1.6.0",
-    "nodemon": "^1.2.1"
+    "nodemon": "^1.2.1",
+    "moment": "^2.8.1",
+    "grunt-mocha-test": "^0.11.0",
+    "chai": "^1.9.1"
   }
 }
