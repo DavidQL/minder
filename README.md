@@ -20,11 +20,11 @@ Node file server with easy user-defined share settings. A sample permissions.txt
 
 Download and expand the source code:
 
-`curl -L https://github.com/DavidQL/minder/archive/v0.2.tar.gz | tar zx`
+`curl -L https://github.com/DavidQL/minder/archive/v0.0.1.tar.gz | tar zx`
 
 Go into the new minder directory:
 
-`cd minder-0.2`
+`cd minder-0.0.1`
 
 If you do not have node installed, run my install script (this will take some time):
 
