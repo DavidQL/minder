@@ -31,14 +31,29 @@ If you do not have node installed, run my install script (this will take some ti
 `bash install.sh`
 
 Then, cd into the Minder directory and run `npm install`.
-Finally, start the file server with `node index.js`.
+
+### Usage
+
+Add top-level user folders from which files will be served. Take a look at the included example_user_folder for examples.
+
+Make sure each user folder has a permissions.txt file.
+
+Start the file server with `node index.js`.
+
+Files can then be queried like so:
+
+`curl localhost:3000/example_user_folder/password-protected.txt?password=flooberjorbin`
 
 ### User folder setup
 
 To create a folder in which Pam can add files, but other users cannot view them:
+
 `useradd pam`
+
 `mkdir pam`
+
 `chmod 770 pam`
+
 `chgrp pam pam`
 
 Now the user pam can add a permissions.txt file to her folder, as well as any files she wants to serve.
